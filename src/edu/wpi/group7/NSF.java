@@ -8,6 +8,11 @@ class NSF
    protected String name;
    protected List<Player> players;
 
+   public NSF()
+   {
+      this.name = null;
+      this.players = new ArrayList<Player>();
+   }
    public NSF(String name)
    {
       this.name = name;
