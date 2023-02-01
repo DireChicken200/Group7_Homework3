@@ -50,7 +50,7 @@ class Player
       {
          printable += nsf.getName() + ",";
       }
-      System.out.println(printable.substring(0, printable.length() - 2));
+      System.out.println(printable.substring(0, printable.length() - 1));
    }
 
    public void addNSF(NSF nsf)

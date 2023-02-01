@@ -11,7 +11,7 @@ public class Olympics
       for(int i = 0; i < 5; i++)
       {
          nsfArray[i] = new NSF();
-         nsfArray[i].setName("NSF_" + i++);
+         nsfArray[i].setName("NSF_" + i);
       }
 
       Player[] playerArray = new Player[15];
@@ -19,15 +19,15 @@ public class Olympics
       for(int i = 0; i < 15; i++)
       {
          playerArray[i] = new Player();
-         playerArray[i].setName("player_" + i++);
+         playerArray[i].setName("player_" + i);
       }
 
-      int i = 0;
-      for(NSF nsf : nsfArray)
+
+      for(int i = 0; i < 5; i++)
       {
-         nsf.addPlayer(playerArray[i++]);
-         nsf.addPlayer(playerArray[i++]);
-         nsf.addPlayer(playerArray[i++]);
+         nsfArray[i].addPlayer(playerArray[3*i]);
+         nsfArray[i].addPlayer(playerArray[3*i+1]);
+         nsfArray[i].addPlayer(playerArray[3*i+2]);
       }
 
       playerArray[0].addNSF(nsfArray[0]);
@@ -41,10 +41,9 @@ public class Olympics
 
       NOC[] nocArray = new NOC[2];
 
-      i = 0;
-      for(NOC noc : nocArray)
+      for(int i = 0; i < 2; i++)
       {
-         noc.setName("NOC_" + i++);
+         nocArray[i] = new NOC("NOC_" + i, null);
       }
 
       ArrayList<NSF> firstThree = new ArrayList<>();
