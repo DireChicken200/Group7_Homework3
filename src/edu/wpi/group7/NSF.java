@@ -8,6 +8,11 @@ class NSF
    protected String name;
    protected List<Player> players;
 
+   public NSF()
+   {
+      this.name = null;
+      this.players = new ArrayList<Player>();
+   }
    public NSF(String name)
    {
       this.name = name;
@@ -40,7 +45,7 @@ class NSF
 
    public void listNSFPlayers()
    {
-      String printable = this.toString() + "\'s players: ";
+      String printable = this.name + "\'s players: ";
       for(Player player : players)
       {
          printable += player.getName() + ",";
@@ -50,13 +55,13 @@ class NSF
 
    public void addPlayer(Player player)
    {
-
+      players.add(player);
    }
 
    @Override
    public String toString()
    {
 
-      return this.name;
+      return "NSF{" + "name='" + name + '\'' + '}';
    }
 }
