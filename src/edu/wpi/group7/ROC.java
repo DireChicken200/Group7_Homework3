@@ -1,12 +1,12 @@
 package edu.wpi.group7;
 
-import java.util.ArrayList;
+import java.util.List;
 
 class ROC {
     private String name;
-    private ArrayList<NOC> NOCs;
+    private List<NOC> NOCs;
 
-    public ROC(String name, ArrayList<NOC> NOCs) {
+    public ROC(String name, List<NOC> NOCs) {
         this.name = name;
         this.NOCs = NOCs;
     }
@@ -15,7 +15,7 @@ class ROC {
         this.name = name;
     }
 
-    void setNOCs(ArrayList<NOC> NOCs) {
+    void setNOCs(List<NOC> NOCs) {
         this.NOCs = NOCs;
     }
 
@@ -23,7 +23,7 @@ class ROC {
         return name;
     }
 
-    ArrayList<NOC> getNOCs() {
+    List<NOC> getNOCs() {
         return NOCs;
     }
 

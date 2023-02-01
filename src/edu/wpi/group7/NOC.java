@@ -1,12 +1,12 @@
 package edu.wpi.group7;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class NOC {
     private String name;
-    private ArrayList<NSF> NSFs;
+    private List<NSF> NSFs;
 
-    public NOC(String name, ArrayList<NSF> NSFs) {
+    public NOC(String name, List<NSF> NSFs) {
         this.name = name;
         this.NSFs = NSFs;
     }
@@ -15,7 +15,7 @@ public class NOC {
         return name;
     }
 
-    ArrayList<NSF> getNSFs() {
+    List<NSF> getNSFs() {
         return NSFs;
     }
 
@@ -23,19 +23,27 @@ public class NOC {
         this.name = name;
     }
 
-    void setNSFs(ArrayList<NSF> NSFs) {
+    void setNSFs(List<NSF> NSFs) {
         this.NSFs = NSFs;
     }
 
+    @Override
     public String toString() {
-        return "";
+        return "NOC{" +
+                "name='" + name + '\'' +
+                ", NSFs=" + NSFs +
+                '}';
     }
 
     int countNSFs() {
-        return 1;
+        return this.NSFs.size();
     }
 
     int countPlayersInNSFs() {
-        return 1;
+        int count = 0;
+        for (int i = 0; i < NSFs.size(); i++) {
+            count += NSFs.get(i).players.size();
+        }
+        return count;
     }
 }
