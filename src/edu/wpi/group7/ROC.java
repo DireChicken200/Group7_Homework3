@@ -27,16 +27,27 @@ class ROC {
         return NOCs;
     }
 
+    @Override
     public String toString() {
-
-        return "";
+        return "ROC{" +
+                "name='" + name + '\'' +
+                ", NOCs=" + NOCs +
+                '}';
     }
 
     int countNSFs() {
-        return 1;
+        int count = 0;
+        for (int i = 0; i < NOCs.size(); i++) {
+            count += NOCs.get(i).countNSFs();
+        }
+        return count;
     }
 
     int countPlayersInNOCNSFs() {
-        return 1;
+        int count = 0;
+        for (int i = 0; i < NOCs.size(); i++) {
+            count += NOCs.get(i).countPlayersInNSFs();
+        }
+        return count;
     }
 }
