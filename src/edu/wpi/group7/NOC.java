@@ -27,14 +27,6 @@ public class NOC {
         this.NSFs = NSFs;
     }
 
-    @Override
-    public String toString() {
-        return "NOC{" +
-                "name='" + name + '\'' +
-                ", NSFs=" + NSFs +
-                '}';
-    }
-
     int countNSFs() {
         return this.NSFs.size();
     }

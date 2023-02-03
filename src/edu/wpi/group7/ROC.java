@@ -27,14 +27,6 @@ class ROC {
         return NOCs;
     }
 
-    @Override
-    public String toString() {
-        return "ROC{" +
-                "name='" + name + '\'' +
-                ", NOCs=" + NOCs +
-                '}';
-    }
-
     int countNSFs() {
         int count = 0;
         for (int i = 0; i < NOCs.size(); i++) {
