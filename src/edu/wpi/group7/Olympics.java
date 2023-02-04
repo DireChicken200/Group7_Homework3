@@ -74,8 +74,12 @@ public class Olympics
       playerArray[0].listPlayerNSFs();
       playerArray[2].listPlayerNSFs();
       System.out.println("h.)");
-      System.out.println(roc.countPlayersInNOCNSFs());
+      System.out.println(("NOC_0: " + nocs.get(0).countPlayersInNSFs()));
+      System.out.println(("NOC_1: " + nocs.get(1).countPlayersInNSFs()));
+      System.out.println("ROC: " + roc.countPlayersInNOCNSFs());
       System.out.println("i.)");
-      System.out.println(roc.countNSFs());
+      System.out.println("NOC_0: " + nocs.get(0).countNSFs());
+      System.out.println("NOC_1: " + nocs.get(1).countNSFs());
+      System.out.println("ROC: " + roc.countNSFs());
    }
 }
